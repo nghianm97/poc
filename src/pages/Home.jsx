@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import  { ETHERSCAN_ADDRESS } from '../constant.js';
+import { ETHERSCAN_ADDRESS } from '../constant.js';
 
 const api_key = "HF314KN7IXWBF3MJWT1B23KTJ7EK5DDHTF"
 
@@ -49,6 +49,10 @@ const Home = () => {
     }
   };
 
+  const linktoEther = () => {
+    window.open("https://etherscan.io/", "_blank");
+  }
+
   return (
     <div className="max-w-xl mx-auto space-y-6 p-4">
       {/* Select Dropdown */}
@@ -95,6 +99,8 @@ const Home = () => {
           </tbody>
         </table>
       </div>
+
+      <p><span className='text-red-600'>Note:</span> you can copy the addresses above or refer to the website to get token information. <p onClick={linktoEther} className='underline text-blue-300 cursor-pointer'>https://etherscan.io/</p></p>
 
       {/* Input Field */}
       <div>
